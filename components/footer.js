@@ -1,30 +1,46 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import React from "react";
+import Link from "next/link";
+// import {
+//   BsTwitter,
+//   BsYoutube,
+//   BsFillEnvelopeFill,
+//   BsGithub,
+// } from "react-icons/bs";
+import SocialBlock from "./SocialBlock";
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+    <footer className="w-full ">
+      {/* <section className="px-2 py-8 max-w-5xl mx-auto ">
+        <div className="flex justify-center items-center w-full">
+          <a href="https://twitter.com/@ChibuikeNnaji10">
+            <BsTwitter className="text-xl mx-3" />
+          </a>
+          <a href="https://youtube.com/c/Androidpill">
+            <BsYoutube className="text-xl mx-3" />
+          </a>
+          <a href="https://github.com/Max1583">
+            <BsGithub className="text-xl mx-3" />
+          </a>
+          <a href="mailto:chibuikennaji306@gmail.com">
+            <BsFillEnvelopeFill className="text-xl mx-3" />
+          </a>
         </div>
-      </Container>
+        <div className="text-center text-sm mt-5">
+          2022 Nnaji Chibuike. All rights reserved
+        </div>
+      </section> */}
+      <section className="max-w-6xl p-2  mx-auto text-zinc-50 mb-3">
+        <div className="max-w-md mx-auto  flex flex-wrap">
+          <SocialBlock type="facebook" />
+          <SocialBlock type="youtube" />
+        </div>
+      </section>{" "}
+      <div className="text-center text-sm border-t border-t-zinc-700 py-5">
+        2022 Androidpill. All rights reserved
+      </div>
     </footer>
-  )
+  );
 }
+
+export default Footer;
