@@ -52,7 +52,7 @@ function Hero() {
                   <CategoryPill type="Tips n Tricks" />
                 </div>
 
-                <Link href="/post_slog">
+                <Link passHref href="/post_slog">
                   <h3 className="font-semibold text-xl mt-5 mb-2 hover:opacity-90 cursor-pointer">
                     Lorem Ipsum dolor emit tandriwch
                   </h3>
@@ -89,7 +89,7 @@ function Hero() {
                       <div>
                         <CategoryPill type={aa.categoty} />
                       </div>
-                      <Link href="/post_slog">
+                      <Link passHref href="/post_slog">
                         <h3 className="font-semibold text-md mt-3 mb-2 hover:opacity-90 cursor-pointer">
                           {aa.title}
                         </h3>

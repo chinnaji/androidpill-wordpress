@@ -10,7 +10,7 @@ function TrendingSection() {
       </h2>
       <div className="flex flex-wrap">
         {a.map((aa) => (
-          <span className="w-full md:w-1/2 ">
+          <span className="w-full md:w-1/2 " key={aa}>
             <TrendingBlock />
           </span>
         ))}

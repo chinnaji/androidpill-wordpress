@@ -15,7 +15,7 @@ function TrendingBlock() {
 
       <span className="p-2 w-2/3 ml-5">
         <CategoryPill type="Games" />
-        <Link href="/post_slog">
+        <Link passHref href="/post_slog">
           <h3 className="font-semibold text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
             Lorem Ipsum dolor emit tandriwch
           </h3>

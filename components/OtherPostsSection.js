@@ -7,7 +7,7 @@ function OtherPostsSection() {
   return (
     <section className="my-10 py-10">
       {a.map((aa) => (
-        <OtherPostBlock />
+        <OtherPostBlock key={aa} />
       ))}
     </section>
   );

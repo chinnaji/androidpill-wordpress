@@ -36,7 +36,7 @@ function Navbar() {
       {/* <button onClick={() => setTheme("light")}>Light Mode</button>
       <button onClick={() => setTheme("dark")}>Dark Mode</button> */}
       <nav className=" max-w-[1200px] mx-auto flex items-center justify-between px-5 md:px-3 ">
-        <Link href="/" passHref>
+        <Link passHref href="/">
           {/* <a className="w-24 h-16 relative cursor-pointer block">
             <Image
               src={logo}
@@ -72,7 +72,9 @@ function Navbar() {
                   onClick={() => setIsSidebar(false)}
                   key={navLink.title}
                 >
-                  <Link href={navLink.path}>{navLink.title}</Link>
+                  <Link passHref href={navLink.path}>
+                    {navLink.title}
+                  </Link>
                 </li>
               ))}
             </ul>
