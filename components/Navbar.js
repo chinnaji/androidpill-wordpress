@@ -30,7 +30,20 @@ function Navbar() {
   ];
 
   const [isSidebar, setIsSidebar] = useState(false);
+  // const [matches, setMatches] = useState(
+  //   window.matchMedia("(min-width: 768px)").matches
+  // );
 
+  // useEffect(() => {
+  //   window
+  //     .matchMedia("(min-width: 768px)")
+  //     .addEventListener("change", (e) => setMatches(e.matches));
+  //   if (isSidebar && !matches) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // });
   return (
     <header className=" dark:border-b-zinc-600 max-h-28 py-3 overflow-hidden w-full  sticky top-0  z-50  bg-dark border-b border-b-zinc-800">
       {/* <button onClick={() => setTheme("light")}>Light Mode</button>
@@ -55,7 +68,7 @@ function Navbar() {
           <div
             className={` ${
               isSidebar ? "block " : "hidden"
-            } fixed h-screen lg:h-full  inset-0  ease-in-out duration-500
+            } bg-dark fixed h-screen lg:h-full  inset-0  ease-in-out duration-500
           lg:block lg:relative`}
           >
             {/* <div className="relativ"> */}
@@ -79,6 +92,10 @@ function Navbar() {
               ))}
             </ul>
           </div>
+          <FiMenu
+            onClick={() => setIsSidebar(true)}
+            className="ml-4 mr-1 lg:hidden cursor-pointer text-2xl text-zinc-600 dark:text-zinc-100"
+          />
         </div>
       </nav>
     </header>

@@ -1,15 +1,36 @@
 import Head from "next/head";
-// import HomePage from "../components/HomePage";
-// import styles from "../styles/Home.module.css";
-// import { NextSeo } from "next-seo";
-// import screenshot from "../images/portfolio.png";
-import Hero from "../components/Hero";
+import MainHero from "../components/MainHero";
 import OtherPostsSection from "../components/OtherPostsSection";
 import TrendingSection from "../components/TrendingSection";
+import { getAllPostsForHome } from "../components/getPosts";
 
-export default function Home() {
+export default function Home({ data }) {
+  const heroPostsId = [2870, 2436, 1324, 1948, 2162];
+
+  const heroPosts = [];
+  const otherHomePagePosts = [];
+  const filterPosts = () => {
+    for (let item = 0; item < data.length; item++) {
+      if (
+        data[item].node.postId === 2870 ||
+        data[item].node.postId === 2436 ||
+        data[item].node.postId === 1324 ||
+        data[item].node.postId === 1948 ||
+        data[item].node.postId === 2162
+      ) {
+        heroPosts.push(data[item]);
+      } else {
+        otherHomePagePosts.push(data[item]);
+      }
+    }
+  };
+  filterPosts();
+
+  // console.log(otherHomePagePosts);
+
   return (
-    <main className="mx-auto max-w-6xl">
+    <main className="mx-auto max-w-6xl px-2">
+      {/* {console.log(data)} */}
       {/* <NextSeo
         title="Chi_Dev Portfolio"
         description="This is My portfolio shocasing my projects"
@@ -43,9 +64,46 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero />
+      <MainHero heroPosts={heroPosts} />
       <TrendingSection />
       <OtherPostsSection />
     </main>
   );
+}
+
+export async function getStaticProps() {
+  const res = await getAllPostsForHome();
+
+  // const res = await client.query({
+  //   query: gql`
+  //     query mainquery {
+  //       posts(where: { in: [2162, 2436, 1948, 1324, 2870] }) {
+  //         edges {
+  //           node {
+  //             title
+  //             excerpt
+  //             slug
+  //             date
+  //             postId
+  //             categories {
+  //               edges {
+  //                 node {
+  //                   name
+  //                   link
+  //                   slug
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `,
+  // });
+
+  return {
+    props: {
+      data: res,
+    },
+  };
 }

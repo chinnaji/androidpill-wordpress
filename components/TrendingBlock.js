@@ -20,7 +20,7 @@ function TrendingBlock() {
             Lorem Ipsum dolor emit tandriwch
           </h3>
         </Link>
-        <p className="text-zinc-400 text-sm">By Admin</p>
+        <p className="text-zinc-400 text-base md:text-sm">By Admin</p>
       </span>
     </div>
   );

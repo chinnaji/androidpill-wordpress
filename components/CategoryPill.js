@@ -11,7 +11,7 @@ function CategoryPill({ type }) {
             : type === "Apps"
             ? "bg-success"
             : "bg-danger"
-        } hover:bg-opacity-70 text-sm rounded mr-3`}
+        } hover:bg-opacity-70 text-xs rounded mr-3`}
       >
         {type}
       </span>
