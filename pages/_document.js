@@ -5,7 +5,7 @@ function MyDocument() {
   return (
     <Html lang="en">
       <Head />
-      <body className="bg-dark relative text-zinc-100">
+      <body className="bg-[#111111] relative text-zinc-100">
         <Main />
         <NextScript />
       </body>

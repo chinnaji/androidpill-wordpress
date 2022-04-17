@@ -15,6 +15,14 @@ export async function getAllPostsForHome() {
               slug
               date
               postId
+              featuredImage {
+                node {
+                  altText
+                  link
+                  sourceUrl
+                }
+              }
+
               categories {
                 edges {
                   node {

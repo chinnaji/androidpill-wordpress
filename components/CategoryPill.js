@@ -6,9 +6,9 @@ function CategoryPill({ type }) {
     <Link passHref href={`/categories/${type}`}>
       <span
         className={`text-zinc-50 px-2 py-1 cursor-pointer ${
-          type === "Games"
+          type === "Android Games"
             ? "bg-orange"
-            : type === "Apps"
+            : type === "Android Apps"
             ? "bg-success"
             : "bg-danger"
         } hover:bg-opacity-70 text-xs rounded mr-3`}

@@ -2,7 +2,7 @@ import Head from "next/head";
 import MainHero from "../components/MainHero";
 import OtherPostsSection from "../components/OtherPostsSection";
 import TrendingSection from "../components/TrendingSection";
-import { getAllPostsForHome } from "../components/getPosts";
+import { getAllPostsForHome } from "../components/helpers/getPosts";
 
 export default function Home({ data }) {
   const heroPostsId = [2870, 2436, 1324, 1948, 2162];
@@ -65,8 +65,10 @@ export default function Home({ data }) {
       </Head>
 
       <MainHero heroPosts={heroPosts} />
-      <TrendingSection />
-      <OtherPostsSection />
+      <TrendingSection trendingPosts={otherHomePagePosts.slice(0, 6)} />
+      <OtherPostsSection
+        otherPosts={otherHomePagePosts.slice(6, otherHomePagePosts.length - 1)}
+      />
     </main>
   );
 }

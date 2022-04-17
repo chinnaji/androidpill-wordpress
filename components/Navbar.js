@@ -45,7 +45,7 @@ function Navbar() {
   //   }
   // });
   return (
-    <header className=" dark:border-b-zinc-600 max-h-28 py-3 overflow-hidden w-full  sticky top-0  z-50  bg-dark border-b border-b-zinc-800">
+    <header className="  max-h-28 py-3 overflow-hidden w-full  sticky top-0  z-50  bg-dark border-b border-b-zinc-800">
       {/* <button onClick={() => setTheme("light")}>Light Mode</button>
       <button onClick={() => setTheme("dark")}>Dark Mode</button> */}
       <nav className=" max-w-[1200px] mx-auto flex items-center justify-between px-5 md:px-3 ">
