@@ -13,7 +13,7 @@ function TrendingBlock({ trendingPost }) {
           <Image
             src={trendingPost.node.featuredImage.node.sourceUrl}
             layout="fill"
-            alt="rr"
+            alt={trendingPost.node.featuredImage.node.altText}
             className="rounded"
           />
         </span>
@@ -24,9 +24,11 @@ function TrendingBlock({ trendingPost }) {
           type={trendingPost.node?.categories?.edges[0].node.name}
         />{" "}
         <Link passHref href={`/${trendingPost?.node?.slug}`}>
-          <h3 className="font-semibold text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
-            Lorem Ipsum dolor emit tandriwch
-          </h3>
+          <a>
+            <h3 className="font-semibold text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
+              {trendingPost.node?.title}
+            </h3>
+          </a>
         </Link>
         <p className="text-sm text-zinc-500 flex items-center ">
           <MdOutlineAccessTime className="mr-2 text-xl" />{" "}

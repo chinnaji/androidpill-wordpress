@@ -2,10 +2,10 @@ import Head from "next/head";
 import MainHero from "../components/MainHero";
 import OtherPostsSection from "../components/OtherPostsSection";
 import TrendingSection from "../components/TrendingSection";
-import { getAllPostsForHome } from "../components/helpers/getPosts";
+import { getAllPostsForHome } from "../helpers/getPosts";
 
 export default function Home({ data }) {
-  const heroPostsId = [2870, 2436, 1324, 1948, 2162];
+  // const heroPostsId = [2870, 2436, 1324, 1948, 2162];
 
   const heroPosts = [];
   const otherHomePagePosts = [];
@@ -29,7 +29,7 @@ export default function Home({ data }) {
   // console.log(otherHomePagePosts);
 
   return (
-    <main className="mx-auto max-w-6xl px-2">
+    <main className="mx-auto max-w-6xl px-3">
       {/* {console.log(data)} */}
       {/* <NextSeo
         title="Chi_Dev Portfolio"
@@ -75,33 +75,6 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await getAllPostsForHome();
-
-  // const res = await client.query({
-  //   query: gql`
-  //     query mainquery {
-  //       posts(where: { in: [2162, 2436, 1948, 1324, 2870] }) {
-  //         edges {
-  //           node {
-  //             title
-  //             excerpt
-  //             slug
-  //             date
-  //             postId
-  //             categories {
-  //               edges {
-  //                 node {
-  //                   name
-  //                   link
-  //                   slug
-  //                 }
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `,
-  // });
 
   return {
     props: {

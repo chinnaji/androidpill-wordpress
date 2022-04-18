@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 import Link from "next/link";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { FiSearch } from "react-icons/fi";
 
 function Navbar() {
   const navLinks = [
@@ -13,15 +14,15 @@ function Navbar() {
     },
     {
       title: "Android Games",
-      path: "/games",
+      path: "/android-games",
     },
     {
       title: "Android Apps",
-      path: "/apps",
+      path: "/android-apps",
     },
     {
       title: "Tips n Tricks",
-      path: "/blog",
+      path: "/tips-n-tricks",
     },
     // {
     //   title: "Contact",
@@ -59,9 +60,11 @@ function Navbar() {
               loading="eager"
             />
           </a> */}
-          <h1 className="text-orange text-xl cursor-pointer font-bold">
-            ANDROIDPILL
-          </h1>
+          <a>
+            <h1 className="text-orange text-xl cursor-pointer font-bold">
+              ANDROIDPILL
+            </h1>
+          </a>
         </Link>
 
         <div className="flex">
@@ -86,16 +89,21 @@ function Navbar() {
                   key={navLink.title}
                 >
                   <Link passHref href={navLink.path}>
-                    {navLink.title}
+                    <a>{navLink.title}</a>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <FiMenu
-            onClick={() => setIsSidebar(true)}
-            className="ml-4 mr-1 lg:hidden cursor-pointer text-2xl text-zinc-600 dark:text-zinc-100"
-          />
+
+          <div className="flex items-center justify-center">
+            <FiSearch className="text-zinc-100 text-2xl mr-2 cursor-pointer hover:text-orange" />
+
+            <FiMenu
+              onClick={() => setIsSidebar(true)}
+              className="ml-4 mr-1 lg:hidden cursor-pointer text-2xl text-zinc-600 dark:text-zinc-100"
+            />
+          </div>
         </div>
       </nav>
     </header>

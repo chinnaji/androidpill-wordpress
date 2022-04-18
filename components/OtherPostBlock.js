@@ -8,7 +8,7 @@ import { MdOutlineAccessTime } from "react-icons/md";
 function OtherPostBlock({ otherPost }) {
   return (
     <section
-      className="flex flex-wrap md:justify-between justify-center items-center text-zinc-50 md:my-0 my-10  
+      className="flex flex-wrap md:justify-between justify-center items-center text-zinc-200 md:my-0 my-10  
     ease-out transition transform "
     >
       {/* thumbnail */}
@@ -17,7 +17,7 @@ function OtherPostBlock({ otherPost }) {
           <Image
             src={otherPost.node.featuredImage.node.sourceUrl}
             layout="fill"
-            alt="rr"
+            alt={otherPost.node.featuredImage.node.altText}
             className="rounded"
             // objectFit="cover"
           />
@@ -27,13 +27,15 @@ function OtherPostBlock({ otherPost }) {
       <span className="p-2  w-full lg:w-1/2 lg:-ml-5">
         <CategoryPill type={otherPost.node?.categories?.edges[0].node.name} />{" "}
         <Link passHref href={`/${otherPost?.node?.slug}`}>
-          <h3 className="font-semibold text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
-            Lorem Ipsum dolor emit tandriwch
-          </h3>
+          <a>
+            <h3 className="font-semibold text-xl text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
+              {otherPost.node?.title}
+            </h3>
+          </a>
         </Link>
         {/* <p className="text-zinc-400 text-sm">By Admin</p> */}
         <div
-          className="text-sm mb-3"
+          className="text-sm mb-3 text-zinc-300"
           dangerouslySetInnerHTML={{
             __html: otherPost?.node?.excerpt,
           }}

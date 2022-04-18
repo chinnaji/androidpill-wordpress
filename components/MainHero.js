@@ -25,7 +25,9 @@ function MainHero({ heroPosts }) {
               src={firstPostItem.node?.featuredImage.node.sourceUrl || te}
               // firstPostItem.node.featuredImage.node.sourceUrl
               layout="fill"
-              alt="rr"
+              alt={
+                firstPostItem.node?.featuredImage.node.altText || "androidpill"
+              }
               className="rounded-md"
               objectFit="cover"
             />
@@ -38,9 +40,11 @@ function MainHero({ heroPosts }) {
                 </div>
 
                 <Link passHref href={`/${firstPostItem?.node?.slug}`}>
-                  <h3 className="font-semibold text-xl mt-3 mb-2 hover:opacity-90 cursor-pointer">
-                    {firstPostItem?.node?.title}
-                  </h3>
+                  <a>
+                    <h3 className="font-semibold text-xl mt-3 mb-2 hover:opacity-90 cursor-pointer">
+                      {firstPostItem?.node?.title}
+                    </h3>
+                  </a>
                 </Link>
                 {/* <p className="text-sm">{firstPostItem.node.excerpt}</p> */}
                 <div
@@ -68,7 +72,7 @@ function MainHero({ heroPosts }) {
                     <Image
                       src={heroPost.node.featuredImage.node.sourceUrl}
                       layout="fill"
-                      alt="rr"
+                      alt={heroPost.node.featuredImage.node.altText}
                       className="rounded transform hover:scale-125"
                       objectFit="cover"
                     />
@@ -81,9 +85,11 @@ function MainHero({ heroPosts }) {
                         </div>
 
                         <Link passHref href={`/${heroPost.node.slug}`}>
-                          <h3 className="font-semibold text-md mt-3 mb-2 hover:opacity-90 cursor-pointer">
-                            {heroPost.node.title}
-                          </h3>
+                          <a>
+                            <h3 className="font-semibold text-md mt-3 mb-2 hover:opacity-90 cursor-pointer">
+                              {heroPost.node.title}
+                            </h3>
+                          </a>
                         </Link>
                       </span>
                     </div>
