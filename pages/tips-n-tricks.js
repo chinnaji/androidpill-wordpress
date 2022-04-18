@@ -1,5 +1,5 @@
 import React from "react";
-import OtherHero from "../components/otherHero";
+import OtherHero from "../components/OtherHero";
 import OtherPostsSection from "../components/OtherPostsSection";
 import { getPostsByCategory } from "../helpers/getPosts";
 
