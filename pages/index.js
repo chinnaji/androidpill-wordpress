@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Nb from "../components/ads/nativeBanners/Nb";
 import MainHero from "../components/MainHero";
 import OtherPostsSection from "../components/OtherPostsSection";
 import TrendingSection from "../components/TrendingSection";
@@ -30,7 +31,7 @@ export default function Home({ data }) {
   return (
     <main className="mx-auto max-w-6xl px-3">
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
@@ -91,6 +92,7 @@ export default function Home({ data }) {
 
       <MainHero heroPosts={heroPosts} />
       <TrendingSection trendingPosts={otherHomePagePosts.slice(0, 6)} />
+      <Nb type={1} />
       <OtherPostsSection
         otherPosts={otherHomePagePosts.slice(6, otherHomePagePosts.length - 1)}
       />

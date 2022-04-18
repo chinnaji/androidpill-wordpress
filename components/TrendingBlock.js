@@ -25,7 +25,7 @@ function TrendingBlock({ trendingPost }) {
         />{" "}
         <Link passHref href={`/${trendingPost?.node?.slug}`}>
           <a>
-            <h3 className="font-semibold text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
+            <h3 className="font-semibold text-md mt-3 mb-2  hover:text-teal cursor-pointer">
               {trendingPost.node?.title}
             </h3>
           </a>

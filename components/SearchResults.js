@@ -39,7 +39,7 @@ function SearchResults({ searchResults }) {
             <CategoryPill type={result.categories?.edges[0].node.name} />{" "}
             <Link passHref href={`/${result?.slug}`}>
               <a>
-                <h3 className="font-semibold text-xl text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
+                <h3 className="font-semibold text-xl text-md mt-3 mb-2  hover:text-teal cursor-pointer">
                   {result.title}
                 </h3>
               </a>

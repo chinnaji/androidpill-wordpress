@@ -26,7 +26,7 @@ function OtherHero({ heroPosts }) {
 
             <Link passHref href={`/${heroPosts[0]?.node?.slug}`}>
               <a>
-                <h3 className="font-semibold text-xl mt-3 mb-2 hover:opacity-90 cursor-pointer">
+                <h3 className="font-semibold text-xl mt-3 mb-2 hover:text-teal cursor-pointer">
                   {heroPosts[0]?.node?.title}
                 </h3>
               </a>

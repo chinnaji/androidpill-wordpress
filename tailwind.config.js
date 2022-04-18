@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         dark: "#121213",
         orange: "#FF4F00",
+        teal: "#00F6CF",
         accent1: "#565556",
         accent2: "#2B2B2B",
         danger: "#FF2044",

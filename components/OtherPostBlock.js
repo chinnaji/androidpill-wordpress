@@ -28,7 +28,7 @@ function OtherPostBlock({ otherPost }) {
         <CategoryPill type={otherPost.node?.categories?.edges[0].node.name} />{" "}
         <Link passHref href={`/${otherPost?.node?.slug}`}>
           <a>
-            <h3 className="font-semibold text-xl text-md mt-3 mb-2  hover:opacity-90 cursor-pointer">
+            <h3 className="font-semibold text-xl text-md mt-3 mb-2 cursor-pointer hover:text-teal">
               {otherPost.node?.title}
             </h3>
           </a>
@@ -48,17 +48,17 @@ function OtherPostBlock({ otherPost }) {
       {/* ad space */}
       <div className=" block relative w-full lg:w-1/5 p-2 h-[180px] md:h-[150px] rounded mdmy-0 my-16">
         <span className="block relative w-full p-2 h-full ">
-          <Image
+          {/* <Image
             src={te}
             layout="fill"
             alt="rr"
             className="rounded"
             // objectFit="cover"
-          />
+          /> */}
         </span>
-        <p className="text-sm text-center text-zinc-400 underline mt-3">
+        {/* <p className="text-sm text-center text-zinc-400 underline mt-3">
           Advertisement
-        </p>
+        </p> */}
       </div>
     </section>
   );

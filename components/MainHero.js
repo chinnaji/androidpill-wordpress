@@ -41,7 +41,7 @@ function MainHero({ heroPosts }) {
 
                 <Link passHref href={`/${firstPostItem?.node?.slug}`}>
                   <a>
-                    <h3 className="font-semibold text-xl mt-3 mb-2 hover:opacity-90 cursor-pointer">
+                    <h3 className="font-semibold text-xl mt-3 mb-2 hover:text-teal cursor-pointer">
                       {firstPostItem?.node?.title}
                     </h3>
                   </a>
@@ -86,7 +86,7 @@ function MainHero({ heroPosts }) {
 
                         <Link passHref href={`/${heroPost.node.slug}`}>
                           <a>
-                            <h3 className="font-semibold text-md mt-3 mb-2 hover:opacity-90 cursor-pointer">
+                            <h3 className="font-semibold text-md mt-3 mb-2 hover:text-teal cursor-pointer">
                               {heroPost.node.title}
                             </h3>
                           </a>

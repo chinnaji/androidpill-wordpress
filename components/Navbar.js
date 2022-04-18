@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import Search from "./Search";
+import logo from "../images/logo.svg";
 
 function Navbar() {
   const [isSearch, setIsSearch] = useState(false);
@@ -54,20 +55,20 @@ function Navbar() {
       <button onClick={() => setTheme("dark")}>Dark Mode</button> */}
         <nav className=" max-w-[1200px] mx-auto flex items-center justify-between px-5 md:px-3 ">
           <Link passHref href="/">
-            {/* <a className="w-24 h-16 relative cursor-pointer block">
-            <Image
-              src={logo}
-              layout="fill"
-              alt="shodex garden logo"
-              priority
-              loading="eager"
-            />
-          </a> */}
-            <a>
+            <a className="w-48 h-9 md:h-12 relative cursor-pointer block">
+              <Image
+                src={logo}
+                layout="fill"
+                alt="shodex garden logo"
+                priority
+                loading="eager"
+              />
+            </a>
+            {/* <a>
               <h1 className="text-orange text-xl cursor-pointer font-bold">
                 ANDROIDPILL
               </h1>
-            </a>
+            </a> */}
           </Link>
 
           <div className="flex">
@@ -87,7 +88,7 @@ function Navbar() {
               <ul className="flex lg:flex-row ml-auto flex-col justify-center items-center h-full  text-zinc-100  -mt-10 md:-mt-0">
                 {navLinks.map((navLink) => (
                   <li
-                    className="hover:text-orange flex flex-col items-center text-lg md:text-sm  px-4 py-2 my-4 lg:my-1 font-medium  lg:capitalize uppercase"
+                    className="hover:text-teal flex flex-col items-center text-lg md:text-sm  px-4 py-2 my-4 lg:my-1 font-medium  lg:capitalize uppercase"
                     onClick={() => setIsSidebar(false)}
                     key={navLink.title}
                   >
@@ -104,7 +105,7 @@ function Navbar() {
                 // onClick={() => setIsSearch(!isSearch)}
                 onClick={() => setIsSearch(true)}
               >
-                <FiSearch className="text-zinc-100 text-2xl mr-2 cursor-pointer hover:text-orange" />
+                <FiSearch className="text-zinc-100 text-2xl mr-2 cursor-pointer hover:text-teal" />
               </span>
 
               <FiMenu

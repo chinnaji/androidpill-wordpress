@@ -27,7 +27,7 @@ function Search({ setIsSearch }) {
         </button>
         <div
           onClick={() => setIsSearch(false)}
-          className="hover:text-orange cursor-pointer fixed left-[48%] bottom-[16%] text-zinc-100 flex underline"
+          className="hover:text-teal cursor-pointer fixed left-[48%] bottom-[16%] text-zinc-100 flex underline"
         >
           <IoIosCloseCircle className="text-2xl mr-1 " /> CLOSE
         </div>

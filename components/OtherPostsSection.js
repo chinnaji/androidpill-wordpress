@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import OtherPostBlock from "./OtherPostBlock";
 import { CgPushDown, CgPushUp } from "react-icons/cg";
+import Nb from "./ads/nativeBanners/Nb";
 
 function OtherPostsSection({ otherPosts }) {
   const [start, setStart] = useState(0);
@@ -44,6 +45,7 @@ function OtherPostsSection({ otherPosts }) {
           </button>
         )}
       </div>
+      <Nb type={2} />
     </section>
   );
 }

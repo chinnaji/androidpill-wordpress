@@ -12,7 +12,7 @@ function Tags({ tags }) {
         <>
           <Link passHref href={`/tag/${tag.name.split(" ").join("-")}`}>
             <a
-              className="font-semibold hover:text-orange cursor-pointer"
+              className="font-semibold hover:text-teal cursor-pointer"
               key={tag.id}
             >
               {tag.name}
