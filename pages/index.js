@@ -3,7 +3,6 @@ import MainHero from "../components/MainHero";
 import OtherPostsSection from "../components/OtherPostsSection";
 import TrendingSection from "../components/TrendingSection";
 import { getAllPostsForHome } from "../helpers/getPosts";
-import Head from "next/head";
 export default function Home({ data }) {
   // const heroPostsId = [2870, 2436, 1324, 1948, 2162];
 
