@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function CategoryPill({ type }) {
   return (
-    <Link passHref href={`/categories/${type}`}>
+    <Link passHref href={`/${type}`}>
       <span
         className={`text-zinc-50 px-2 py-1 cursor-pointer ${
           type === "Android Games"

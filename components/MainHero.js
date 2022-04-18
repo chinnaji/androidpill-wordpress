@@ -14,7 +14,7 @@ function MainHero({ heroPosts }) {
   return (
     <>
       <section className="max-w-6xl mx-auto flex flex-wrap text-zinc-50 my-10 md:my-20">
-        <h2 className="text-zinc-100 font-bold text-xl md:text-3xl w-full text-center mb-8">
+        <h2 className="text-zinc-100 font-bold text-2xl md:text-3xl w-full text-center mb-8">
           Hot As 🔥
         </h2>
         {/* {} */}

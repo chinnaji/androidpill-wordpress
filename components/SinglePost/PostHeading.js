@@ -11,9 +11,9 @@ function PostHeading({ title, thumbnail, date, tags }) {
       </h1>
       <p className="text-sm text-zinc-400 flex items-center  justify-center mb-10">
         <MdOutlineAccessTime className="mr-2 text-xl" />{" "}
-        <span>{date.slice(0, 10)}</span>
+        <span className="fon-semibold">{date.slice(0, 10)}</span>
         {/* <Tags  */}
-        <Tags tags={tags} />
+        {/* <Tags tags={tags} /> */}
       </p>
 
       {/* thumbnail */}

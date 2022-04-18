@@ -140,6 +140,40 @@ export async function getPostsByCategory(categoryName) {
   return res;
 }
 
+export async function getPostsBySearchQuery(searchQuery) {
+  const res = await client.query({
+    query: gql`
+      query getPostsBySearchQuery($searchQuery: String!) {
+        posts(where: { search: $searchQuery }) {
+          nodes {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                altText
+                sourceUrl
+              }
+            }
+
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+    variables: { searchQuery },
+  });
+  return res;
+}
+
 // export async function getPostsTags() {
 //   const res = await client.query({
 //     query: gql`
