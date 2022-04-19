@@ -52,9 +52,9 @@ function Navbar() {
       <header className="  max-h-28 py-3 overflow-hidden w-full  sticky top-0  z-50  bg-dark border-b border-b-zinc-800">
         {/* <button onClick={() => setTheme("light")}>Light Mode</button>
       <button onClick={() => setTheme("dark")}>Dark Mode</button> */}
-        <nav className=" max-w-[1200px] mx-auto flex items-center justify-between px-5 md:px-3 ">
+        <nav className=" max-w-[1200px] mx-auto flex items-center justify-between px-3 ">
           <Link passHref href="/">
-            <a className="w-48 h-9 md:h-12 relative cursor-pointer block">
+            <a className="w-48 h-9 md:h-12 relative cursor-pointer block md:-ml-0 -ml-5">
               <Image
                 src={logo}
                 layout="fill"
@@ -79,7 +79,7 @@ function Navbar() {
             >
               {/* <div className="relativ"> */}
               <MdOutlineClose
-                className="cursor-pointer text-3xl  right-10 top-10 absolute lg:hidden text-zinc-600 bg-accent2"
+                className="cursor-pointer text-3xl  right-10 top-10 absolute lg:hidden text-zinc-400 bg-accent2 rounded"
                 onClick={() => setIsSidebar(false)}
               />
               {/* </div> */}
