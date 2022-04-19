@@ -10,6 +10,7 @@ module.exports = {
         dark: "#121213",
         orange: "#FF4F00",
         teal: "#00F6CF",
+        darkTeal: "#4B9C8E",
         accent1: "#565556",
         accent2: "#2B2B2B",
         danger: "#FF2044",

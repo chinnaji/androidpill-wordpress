@@ -5,12 +5,14 @@ import CategoryPill from "./CategoryPill";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdOutlineAccessTime } from "react-icons/md";
+import Nb from "./ads/nativeBanners/Nb";
 
 function SearchResults({ searchResults }) {
   const router = useRouter();
   const { searchQuery } = router.query;
   return (
     <>
+      <Nb type={3} />
       <h1 className="text-center text-zinc-100 font-semibold text-2xl md:text-3xl my-10">
         Found <span className="underline">{searchResults.nodes.length}</span>{" "}
         Search Results for <span className="underline">{searchQuery}</span>

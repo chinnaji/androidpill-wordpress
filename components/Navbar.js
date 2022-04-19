@@ -3,7 +3,6 @@ import Image from "next/image";
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 import Link from "next/link";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import Search from "./Search";
 import logo from "../images/logo.svg";
@@ -88,7 +87,7 @@ function Navbar() {
               <ul className="flex lg:flex-row ml-auto flex-col justify-center items-center h-full  text-zinc-100  -mt-10 md:-mt-0">
                 {navLinks.map((navLink) => (
                   <li
-                    className="hover:text-teal flex flex-col items-center text-lg md:text-sm  px-4 py-2 my-4 lg:my-1 font-medium  lg:capitalize uppercase"
+                    className={`hover:text-teal flex flex-col items-center text-lg md:text-sm  px-4 py-2 my-4 lg:my-1 font-medium  lg:capitalize uppercase`}
                     onClick={() => setIsSidebar(false)}
                     key={navLink.title}
                   >

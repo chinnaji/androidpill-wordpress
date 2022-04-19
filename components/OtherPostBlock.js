@@ -46,7 +46,7 @@ function OtherPostBlock({ otherPost }) {
         </p>
       </span>
       {/* ad space */}
-      <div className=" block relative w-full lg:w-1/5 p-2 h-[180px] md:h-[150px] rounded mdmy-0 my-16">
+      <div className=" md:block hidden relative w-full lg:w-1/5 p-2 h-[180px] md:h-[150px] rounded mdmy-0 my-16">
         <span className="block relative w-full p-2 h-full ">
           {/* <Image
             src={te}

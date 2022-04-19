@@ -10,6 +10,7 @@ function OtherPostsSection({ otherPosts }) {
 
   const showMore = () => {
     setEnd((prevState) => prevState + 10);
+    // nativeBannerAdsStart + 1;
   };
   const showLess = () => {
     setEnd((prevState) => prevState - 10);
@@ -18,17 +19,24 @@ function OtherPostsSection({ otherPosts }) {
   return (
     <section className="my-10 py-10">
       {partitionPosts.map((partitionPost, index) => (
-        <OtherPostBlock otherPost={partitionPost} key={index} />
+        <div key={index}>
+          {index === 10 ? (
+            <>
+              <Nb type={3} />
+            </>
+          ) : null}
+          <OtherPostBlock otherPost={partitionPost} key={index} />
+        </div>
       ))}{" "}
       <div className="flex items-center justify-center gap-x-4">
-        {/* only show 'show more button' when partitionPost.length is less  than otherPosts.length  */}
+        {/* only show 'show more button' whben partitionPost.length is less  than otherPosts.length  */}
         {partitionPosts.length === otherPosts.length ? (
           <button className="border-2 rounded px-7 py-2 my-10 border-zinc-800 hover:bg-zinc-800 transition ease-in-out font-semibold">
             THE END😎
           </button>
         ) : (
           <button
-            className=" flex items-center justify-center  rounded px-7 py-2 my-10 text-zinc-100 hover: bg-orange hover:bg-amber-600 transition ease-in-out font-semibold"
+            className=" flex items-center justify-center  rounded px-7 py-2 my-10 text-zinc-800 hover: bg-teal hover:bg-darkTeal transition ease-in-out font-semibold"
             onClick={() => showMore()}
           >
             {/* SHOW LOADING TEXT WHEN BUTTN IS CLICKED */}
@@ -45,7 +53,10 @@ function OtherPostsSection({ otherPosts }) {
           </button>
         )}
       </div>
-      <Nb type={2} />
+      <div className="mt-10">
+        {" "}
+        <Nb type={2} />
+      </div>
     </section>
   );
 }

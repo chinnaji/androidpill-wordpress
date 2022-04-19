@@ -5,10 +5,15 @@ import { useRouter } from "next/router";
 function Search({ setIsSearch }) {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const handleSearch = () => {
-    setIsSearch(false);
-    // router.push(`/search/${searchQuery}`);
+    setIsLoading(true);
     router.push(`/search/${searchQuery}`);
+
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsSearch(false);
+    }, 2000);
   };
   return (
     <section className=" inset-0 bg-dark background-opacity-70 w-screen h-screen fixed z-[99999999] flex items-center justify-center">
@@ -19,12 +24,21 @@ function Search({ setIsSearch }) {
           required
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button
-          //   onClick={() => handleSearch()}
-          className="rounded w-full py-5 text-zinc-100 bg-orange font-semibold px-10 outline-none focus:outline-none focus:border-0"
-        >
-          SEARCH
-        </button>
+        {isLoading ? (
+          <button
+            type="button"
+            className="rounded w-full py-5  bg-teal hover:bg-darkTeal hover:text-zinc-100 text-dark font-semibold px-10 outline-none focus:outline-none focus:border-0"
+          >
+            SEARCHING THE MOON 🌚...
+          </button>
+        ) : (
+          <button
+            //   onClick={() => handleSearch()}
+            className="rounded w-full py-5  bg-teal hover:bg-darkTeal hover:text-zinc-100 text-dark font-semibold px-10 outline-none focus:outline-none focus:border-0"
+          >
+            SEARCH
+          </button>
+        )}
         <div
           onClick={() => setIsSearch(false)}
           className="hover:text-teal cursor-pointer fixed left-[48%] bottom-[16%] text-zinc-100 flex underline"
