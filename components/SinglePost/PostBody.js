@@ -2,15 +2,15 @@ import React from "react";
 
 function PostBody({ post }) {
   return (
-    <div>
+    <article className="post">
       {" "}
       <div
-        className="text-zinc-300"
+        className="text-zinc-300 "
         dangerouslySetInnerHTML={{
           __html: post.content,
         }}
       />
-    </div>
+    </article>
   );
 }
 

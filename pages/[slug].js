@@ -4,12 +4,13 @@ import PostHeading from "../components/SinglePost/PostHeading";
 import { getPostsBySlug, getPost } from "../helpers/getPosts";
 import parse from "html-react-parser";
 import Head from "next/head";
+import Nb from "../components/ads/nativeBanners/Nb";
 
 function SinglePost({ post }) {
   const fullHead = parse(post.seo.fullHead);
 
   return (
-    <main className="max-w-6xl mx-auto p-2">
+    <main className="max-w-6xl mx-auto p-2 ">
       <Head>{fullHead}</Head>
       <PostHeading
         date={post.date}
@@ -19,6 +20,7 @@ function SinglePost({ post }) {
       />
 
       <PostBody post={post} />
+      <Nb type={2} />
     </main>
   );
 }
