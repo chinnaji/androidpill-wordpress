@@ -25,6 +25,7 @@ function MainHero({ heroPosts }) {
               src={firstPostItem.node?.featuredImage.node.sourceUrl || te}
               // firstPostItem.node.featuredImage.node.sourceUrl
               layout="fill"
+              priority
               alt={
                 firstPostItem.node?.featuredImage.node.altText || "androidpill"
               }
