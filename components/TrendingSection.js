@@ -1,6 +1,6 @@
 import React from "react";
 import TrendingBlock from "./TrendingBlock";
-import te from "../images/shodex_garden.png";
+import te from "../images/asset.jpg";
 import CategoryPill from "./CategoryPill";
 import Link from "next/link";
 import Image from "next/image";

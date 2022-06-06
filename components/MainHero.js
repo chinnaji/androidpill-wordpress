@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import te from "../images/shodex_garden.png";
+import te from "../images/asset.jpg";
 import CategoryPill from "./CategoryPill";
 import Link from "next/link";
 

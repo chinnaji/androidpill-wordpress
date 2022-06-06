@@ -6,7 +6,7 @@ import Tags from "./Tags";
 function PostHeading({ title, thumbnail, date, tags }) {
   return (
     <div>
-      <h1 className="lg:text-4xl text-2xl font-semibold mt-10 mb-5 text-zinc-100 text-center">
+      <h1 className="lg:text-4xl text-3xl font-semibold mt-16 lg:mt-10 mb-5 text-zinc-100 text-center">
         {title}
       </h1>
       <p className="text-sm text-zinc-400 flex items-center  justify-center mb-10">

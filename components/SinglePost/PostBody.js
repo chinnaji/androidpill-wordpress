@@ -7,7 +7,7 @@ function PostBody({ post }) {
       <div
         className="text-zinc-300 "
         dangerouslySetInnerHTML={{
-          __html: post.content,
+          __html: post.content.replaceAll("i0.wp.com/", ""),
         }}
       />
     </article>

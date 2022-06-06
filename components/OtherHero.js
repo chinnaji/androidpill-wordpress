@@ -2,7 +2,7 @@ import React from "react";
 import CategoryPill from "./CategoryPill";
 import Link from "next/link";
 import Image from "next/image";
-import te from "../images/shodex_garden.png";
+import te from "../images/asset.jpg";
 function OtherHero({ heroPosts }) {
   var randomPostIndex = Math.floor(Math.random() * 100);
   return (

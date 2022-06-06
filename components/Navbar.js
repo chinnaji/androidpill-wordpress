@@ -33,20 +33,7 @@ function Navbar() {
   ];
 
   const [isSidebar, setIsSidebar] = useState(false);
-  // const [matches, setMatches] = useState(
-  //   window.matchMedia("(min-width: 768px)").matches
-  // );
 
-  // useEffect(() => {
-  //   window
-  //     .matchMedia("(min-width: 768px)")
-  //     .addEventListener("change", (e) => setMatches(e.matches));
-  //   if (isSidebar && !matches) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
-  // });
   return (
     <>
       <header className="  max-h-28 py-3 overflow-hidden w-full  sticky top-0  z-50  bg-dark border-b border-b-zinc-800">
