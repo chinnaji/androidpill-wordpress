@@ -1,6 +1,6 @@
 # Androidpill is my personal android gaming blog, created using cool tecnologies like Next.js, WordPress and Graphql
 
- **Check it out - [Live Preview 👉👉](https://androidpill.com)**  
+ **Check it out - [Live Preview ](https://androidpill.com)**  
 
 ## SCREENSHOTS 👇👇  
 
