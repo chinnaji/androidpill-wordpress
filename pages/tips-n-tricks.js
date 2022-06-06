@@ -23,7 +23,7 @@ export async function getStaticProps() {
     props: {
       posts: res.data.posts.edges,
     },
-    revalidate: 10,
+    //revalidate: 10,
   };
 }
 export default tipsNTricks;

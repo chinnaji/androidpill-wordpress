@@ -52,7 +52,7 @@ export async function getStaticProps({ params }) {
       // return post
       post: res.data.postBy,
     },
-    revalidate: 10,
+    //revalidate: 10,
   };
 }
 
